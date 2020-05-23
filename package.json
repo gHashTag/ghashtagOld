@@ -3,16 +3,26 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-   "ios": "react-native run-ios --simulator='iPhone SE'",
-   "android": "react-native run-android",
-   "lint": "esw src/**",
-   "lint-watch": "esw -w --changed src/**",
-   "postinstall":"cd ./ios && pod install && cd .."
+    "ios": "react-native run-ios --simulator='iPhone SE'",
+    "android": "react-native run-android",
+    "lint": "esw src/**",
+    "lint-watch": "esw -w --changed src/**",
+    "postinstall": "cd ./ios && pod install && cd .."
   },
   "precommit": "lint",
   "dependencies": {
+    "@react-navigation/native": "^5.4.2",
+    "@react-navigation/native-stack": "^5.0.5",
+    "faker": "^4.1.0",
+    "formik": "^2.1.4",
     "react": "16.11.0",
-    "react-native": "0.62.2"
+    "react-native": "0.62.2",
+    "react-native-appearance": "^0.3.4",
+    "react-native-safe-area-context": "^2.0.0",
+    "react-native-screens": "^2.8.0",
+    "react-native-spinkit": "^1.5.0",
+    "react-native-vector-icons": "^6.6.0",
+    "yup": "^0.29.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",

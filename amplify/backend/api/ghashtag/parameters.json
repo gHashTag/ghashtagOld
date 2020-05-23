@@ -1,0 +1,11 @@
+{
+    "AppSyncApiName": "ghashtag",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": "false",
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authghashtag516f577f",
+            "Outputs.UserPoolId"
+        ]
+    }
+}
