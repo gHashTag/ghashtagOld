@@ -16,7 +16,8 @@ const styles = StyleSheet.create({
     borderRadius: circle / 2,
     shadowColor: 'black',
     shadowOffset: { height: 4 },
-    shadowOpacity: 0.5
+    shadowOpacity: 0.5,
+    elevation: 5
   },
   h3: {
     alignSelf: 'center',

@@ -9,7 +9,6 @@ import { TabBottom1, TabBottom4 } from './screens/TabBottom'
 import TabBottom3 from './screens/TabBottom/TabBottom3'
 import TabNavigator from './TabNavigator'
 import TopTabNavigator from './TopTabNavigator'
-import { ButtonPlay } from './components'
 
 enableScreens()
 
@@ -33,11 +32,9 @@ const Tab = () => {
       <TabNavigator.Navigator initialRouteName="TabBottom0">
         <TabNavigator.Screen name="TabBottom0" component={TabsTop} />
         <TabNavigator.Screen name="TabBottom1" component={TabBottom1} />
-        <TabNavigator.Screen name="TabBottom2" component={TabBottom3} />
         <TabNavigator.Screen name="TabBottom3" component={TabBottom3} />
         <TabNavigator.Screen name="TabBottom4" component={TabBottom4} />
       </TabNavigator.Navigator>
-      <ButtonPlay />
     </>
   )
 }

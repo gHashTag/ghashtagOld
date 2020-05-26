@@ -69,12 +69,12 @@ const Stack2 = memo<Stack2T>(({ route, navigation }) => {
         <Space height={Platform.OS === 'ios' ? 50 : 20} />
         <H1 title="CHANGE TEAM" />
         <ButtonMiddle
-          title={dark ? 'AirB' : 'AirW'}
-          onPress={() => updateObj({ air: true, fire: false, water: false, earth: false })}
-        />
-        <ButtonMiddle
           title={dark ? 'FireB' : 'FireW'}
           onPress={() => updateObj({ air: false, fire: true, water: false, earth: false })}
+        />
+        <ButtonMiddle
+          title={dark ? 'AirB' : 'AirW'}
+          onPress={() => updateObj({ air: true, fire: false, water: false, earth: false })}
         />
         <ButtonMiddle
           title={dark ? 'WaterB' : 'WaterW'}

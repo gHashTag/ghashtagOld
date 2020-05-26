@@ -11,7 +11,7 @@ const SignIn = ({ navigation }) => {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
 
-  const _onPress = async values => {
+  const _onPress = async (values) => {
     setLoading(true)
     setError('')
     try {
@@ -37,18 +37,14 @@ const SignIn = ({ navigation }) => {
   }
 
   return (
-    <AppContainer onPress={goBack(navigation)} title=" " loading={loading}>
+    <AppContainer onPress={goBack(navigation)} title=" " loading={loading} message={error}>
       <Space height={140} />
       <Formik
         initialValues={{ email: '', password: '' }}
-        onSubmit={values => _onPress(values) && setUserInfo(values.email)}
+        onSubmit={(values) => _onPress(values) && setUserInfo(values.email)}
         validationSchema={Yup.object().shape({
-          email: Yup.string()
-            .email()
-            .required(),
-          password: Yup.string()
-            .min(6)
-            .required()
+          email: Yup.string().email().required(),
+          password: Yup.string().min(6).required()
         })}
       >
         {({ values, handleChange, errors, setFieldTouched, touched, isValid, handleSubmit }) => (

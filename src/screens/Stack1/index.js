@@ -24,7 +24,7 @@ type Stack1T = {
 }
 
 const Stack1 = memo<Stack1T>(({ navigation }) => {
-  const _onPress = async input => {
+  const _onPress = async (input) => {
     try {
       const selected = await DataStore.save(new Element({ ...input }))
       selected && goHome(navigation)()
@@ -43,12 +43,12 @@ const Stack1 = memo<Stack1T>(({ navigation }) => {
         <Space height={Platform.OS === 'ios' ? 30 : 20} />
         <H1 title="SELECT TEAM" />
         <ButtonMiddle
-          title={dark ? 'AirB' : 'AirW'}
-          onPress={() => _onPress({ air: true, fire: false, water: false, earth: false, owner })}
-        />
-        <ButtonMiddle
           title={dark ? 'FireB' : 'FireW'}
           onPress={() => _onPress({ air: false, fire: true, water: false, earth: false, owner })}
+        />
+        <ButtonMiddle
+          title={dark ? 'AirB' : 'AirW'}
+          onPress={() => _onPress({ air: true, fire: false, water: false, earth: false, owner })}
         />
         <ButtonMiddle
           title={dark ? 'WaterB' : 'WaterW'}

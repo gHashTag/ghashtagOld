@@ -17,9 +17,17 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* ghashtagTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ghashtagTests.m */; };
+		6A82C83E16FC48AFB90DF076 /* IBM-Logo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC81683DEC18490191ED25D4 /* IBM-Logo.ttf */; };
+		7305931624796D22001CF779 /* RNPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EDDE87B49F41F6BFCB82FC /* RNPlaceholder.swift */; };
+		7305931724796D22001CF779 /* RNPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EDDE87B49F41F6BFCB82FC /* RNPlaceholder.swift */; };
+		7305931824796D22001CF779 /* RNPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EDDE87B49F41F6BFCB82FC /* RNPlaceholder.swift */; };
 		A6AB7E820E6BE1153A7255C9 /* libPods-ghashtag-ghashtagTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 002BCB8905C8B76490734FA5 /* libPods-ghashtag-ghashtagTests.a */; };
 		ADEC451605099F6D622C46F5 /* libPods-ghashtag-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 246876A95B3D132E5BB167AE /* libPods-ghashtag-tvOS.a */; };
+		B5CCD5D21687452680A10ACF /* TheDolbak-Brush.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A7C8EAE0EEF4A0DA1591347 /* TheDolbak-Brush.ttf */; };
 		C304CC334DFA2562785EB628 /* libPods-ghashtag-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDDB975E669E85B915F31B7 /* libPods-ghashtag-tvOSTests.a */; };
+		D6E7113048F54C2284CDF385 /* 3270Narrow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C62028B057AE495C941F49FD /* 3270Narrow.ttf */; };
+		EFE828C0178D4CA88F17F8DA /* RNPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EDDE87B49F41F6BFCB82FC /* RNPlaceholder.swift */; };
+		F360BE072ABB48C08F5E5ABE /* KLMN_Flash_Pix.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DCA51D511CEB434BBFCCA03B /* KLMN_Flash_Pix.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +53,7 @@
 		00E356EE1AD99517003FC87E /* ghashtagTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ghashtagTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* ghashtagTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ghashtagTests.m; sourceTree = "<group>"; };
+		053024FE797E4376A5BE499D /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* ghashtag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ghashtag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ghashtag/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ghashtag/AppDelegate.m; sourceTree = "<group>"; };
@@ -55,18 +64,38 @@
 		1AE8EEBF992A965549D7816D /* libPods-ghashtag.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ghashtag.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24259051AC8DBE3EAF0EF47B /* Pods-ghashtag.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ghashtag.release.xcconfig"; path = "Target Support Files/Pods-ghashtag/Pods-ghashtag.release.xcconfig"; sourceTree = "<group>"; };
 		246876A95B3D132E5BB167AE /* libPods-ghashtag-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ghashtag-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		24830F5B4E604179ACEAAA34 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* ghashtag-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ghashtag-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* ghashtag-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ghashtag-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F9A9C55666447F1AE50FB73 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
 		31ABF837AF3955D3796DB542 /* Pods-ghashtag.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ghashtag.debug.xcconfig"; path = "Target Support Files/Pods-ghashtag/Pods-ghashtag.debug.xcconfig"; sourceTree = "<group>"; };
+		4841905083FA4BEEA5138395 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
 		602CD8EA23E44E2BF0799F7A /* Pods-ghashtag-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ghashtag-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-ghashtag-tvOS/Pods-ghashtag-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		689C97C153F24CBD8C36FCF0 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
+		68ACDE69B56A4047A09A99A9 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		6A8285B1C6D264219189F4E9 /* Pods-ghashtag-ghashtagTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ghashtag-ghashtagTests.release.xcconfig"; path = "Target Support Files/Pods-ghashtag-ghashtagTests/Pods-ghashtag-ghashtagTests.release.xcconfig"; sourceTree = "<group>"; };
 		7DDDB975E669E85B915F31B7 /* libPods-ghashtag-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ghashtag-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FE0D0CED6DA8542D8A08800 /* Pods-ghashtag-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ghashtag-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-ghashtag-tvOSTests/Pods-ghashtag-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		8FEFBA1A8B1148A8A614EB11 /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
+		95D9E74BD1DD48BA842C8961 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
+		9A7C8EAE0EEF4A0DA1591347 /* TheDolbak-Brush.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "TheDolbak-Brush.ttf"; path = "../assets/fonts/TheDolbak-Brush.ttf"; sourceTree = "<group>"; };
+		A7EDDE87B49F41F6BFCB82FC /* RNPlaceholder.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; path = RNPlaceholder.swift; sourceTree = "<group>"; };
 		B1D118C1CFA4765E7577EE74 /* Pods-ghashtag-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ghashtag-tvOS.release.xcconfig"; path = "Target Support Files/Pods-ghashtag-tvOS/Pods-ghashtag-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		BF047CA81758484AB89947F7 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
+		C03EA185B63C4ECD941BDAC1 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
+		C0F68E175FBA41EC912591FA /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
+		C518CAF867F349E5B43A3615 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
+		C62028B057AE495C941F49FD /* 3270Narrow.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = 3270Narrow.ttf; path = ../assets/fonts/3270Narrow.ttf; sourceTree = "<group>"; };
+		D7D1B9B212A14D70A4203923 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		DA1E9E3C74D472C8AA5944E1 /* Pods-ghashtag-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ghashtag-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-ghashtag-tvOSTests/Pods-ghashtag-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DC81683DEC18490191ED25D4 /* IBM-Logo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "IBM-Logo.ttf"; path = "../assets/fonts/IBM-Logo.ttf"; sourceTree = "<group>"; };
+		DCA51D511CEB434BBFCCA03B /* KLMN_Flash_Pix.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = KLMN_Flash_Pix.ttf; path = ../assets/fonts/KLMN_Flash_Pix.ttf; sourceTree = "<group>"; };
+		E90C789E55274CB192B0812C /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		F39FE0A266ED6528A6B3A5F7 /* Pods-ghashtag-ghashtagTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ghashtag-ghashtagTests.debug.xcconfig"; path = "Target Support Files/Pods-ghashtag-ghashtagTests/Pods-ghashtag-ghashtagTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F3E5A2073F834C08BA2FB8C0 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
+		FB614DB8939C4558BF669CFF /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +151,33 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		057DE35777A547BE9ABB34A6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C62028B057AE495C941F49FD /* 3270Narrow.ttf */,
+				DC81683DEC18490191ED25D4 /* IBM-Logo.ttf */,
+				DCA51D511CEB434BBFCCA03B /* KLMN_Flash_Pix.ttf */,
+				9A7C8EAE0EEF4A0DA1591347 /* TheDolbak-Brush.ttf */,
+				E90C789E55274CB192B0812C /* AntDesign.ttf */,
+				24830F5B4E604179ACEAAA34 /* Entypo.ttf */,
+				68ACDE69B56A4047A09A99A9 /* EvilIcons.ttf */,
+				BF047CA81758484AB89947F7 /* Feather.ttf */,
+				C03EA185B63C4ECD941BDAC1 /* FontAwesome.ttf */,
+				4841905083FA4BEEA5138395 /* FontAwesome5_Brands.ttf */,
+				C518CAF867F349E5B43A3615 /* FontAwesome5_Regular.ttf */,
+				2F9A9C55666447F1AE50FB73 /* FontAwesome5_Solid.ttf */,
+				8FEFBA1A8B1148A8A614EB11 /* Fontisto.ttf */,
+				C0F68E175FBA41EC912591FA /* Foundation.ttf */,
+				689C97C153F24CBD8C36FCF0 /* Ionicons.ttf */,
+				FB614DB8939C4558BF669CFF /* MaterialCommunityIcons.ttf */,
+				F3E5A2073F834C08BA2FB8C0 /* MaterialIcons.ttf */,
+				95D9E74BD1DD48BA842C8961 /* Octicons.ttf */,
+				D7D1B9B212A14D70A4203923 /* SimpleLineIcons.ttf */,
+				053024FE797E4376A5BE499D /* Zocial.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		13B07FAE1A68108700A75B9A /* ghashtag */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,8 +217,15 @@
 				DA1E9E3C74D472C8AA5944E1 /* Pods-ghashtag-tvOSTests.debug.xcconfig */,
 				8FE0D0CED6DA8542D8A08800 /* Pods-ghashtag-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		7305931924796D22001CF779 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				A7EDDE87B49F41F6BFCB82FC /* RNPlaceholder.swift */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -181,6 +244,8 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				2FE8D2AD9ECEC818B9900B32 /* Pods */,
+				057DE35777A547BE9ABB34A6 /* Resources */,
+				7305931924796D22001CF779 /* Recovered References */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -342,6 +407,10 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				D6E7113048F54C2284CDF385 /* 3270Narrow.ttf in Resources */,
+				6A82C83E16FC48AFB90DF076 /* IBM-Logo.ttf in Resources */,
+				F360BE072ABB48C08F5E5ABE /* KLMN_Flash_Pix.ttf in Resources */,
+				B5CCD5D21687452680A10ACF /* TheDolbak-Brush.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,6 +690,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00E356F31AD99517003FC87E /* ghashtagTests.m in Sources */,
+				7305931624796D22001CF779 /* RNPlaceholder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -630,6 +700,7 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				EFE828C0178D4CA88F17F8DA /* RNPlaceholder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -639,6 +710,7 @@
 			files = (
 				2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */,
 				2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */,
+				7305931724796D22001CF779 /* RNPlaceholder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -647,6 +719,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DCD954D1E0B4F2C00145EB5 /* ghashtagTests.m in Sources */,
+				7305931824796D22001CF779 /* RNPlaceholder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -697,6 +770,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ghashtag.app/ghashtag";
 			};
 			name = Debug;
@@ -717,6 +791,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ghashtag.app/ghashtag";
 			};
 			name = Release;
@@ -743,7 +818,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = ghashtag;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -764,7 +839,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = ghashtag;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -792,6 +867,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.ghashtag-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 			};
@@ -820,6 +896,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.ghashtag-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 			};
@@ -847,6 +924,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.ghashtag-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ghashtag-tvOS.app/ghashtag-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
@@ -874,6 +952,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.ghashtag-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ghashtag-tvOS.app/ghashtag-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
@@ -936,6 +1015,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -988,6 +1068,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

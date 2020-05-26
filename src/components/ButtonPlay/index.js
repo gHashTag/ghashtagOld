@@ -1,6 +1,6 @@
 // @flow
 import React, { memo, useRef, useEffect, useState } from 'react'
-import { StyleSheet, TouchableOpacity, Animated, Easing } from 'react-native'
+import { StyleSheet, TouchableOpacity, Animated, Easing, View } from 'react-native'
 import type { TextStyleProp, ViewStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet'
 import _ from 'lodash'
 import { connect } from 'react-redux'
@@ -55,7 +55,7 @@ type ButtonPlayT = {
 
 const rotation = new Animated.Value(0)
 
-const ButtonPlay = memo<ButtonPlayT>(props => {
+const ButtonPlay = memo<ButtonPlayT>((props) => {
   const { container, img } = styles
   const { dark } = useTheme()
   const [toggled, setToggled] = useState(!false)
@@ -118,16 +118,16 @@ const ButtonPlay = memo<ButtonPlayT>(props => {
 
   const player = useRef()
   return (
-    <>
+    <View>
       <TouchableOpacity style={container} onPress={_onPress}>
         <Animated.Image source={icon} style={[img, { transform: [{ rotate: spin }] }]} />
       </TouchableOpacity>
-    </>
+    </View>
   )
 })
 
 //export { ButtonPlay }
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     toggled: state.play.toggled,
     track: state.play.track

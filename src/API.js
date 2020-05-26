@@ -218,33 +218,6 @@ export type DeleteGalleryInput = {|
   _version?: ?number,
 |};
 
-export type CreateBackgroundInput = {|
-  id?: ?string,
-  title: string,
-  uri: string,
-  _version?: ?number,
-|};
-
-export type ModelBackgroundConditionInput = {|
-  title?: ?ModelStringInput,
-  uri?: ?ModelStringInput,
-  and?: ?Array< ?ModelBackgroundConditionInput >,
-  or?: ?Array< ?ModelBackgroundConditionInput >,
-  not?: ?ModelBackgroundConditionInput,
-|};
-
-export type UpdateBackgroundInput = {|
-  id: string,
-  title?: ?string,
-  uri?: ?string,
-  _version?: ?number,
-|};
-
-export type DeleteBackgroundInput = {|
-  id?: ?string,
-  _version?: ?number,
-|};
-
 export type ModelElementFilterInput = {|
   id?: ?ModelIDInput,
   air?: ?ModelBooleanInput,
@@ -312,15 +285,6 @@ export type ModelGalleryFilterInput = {|
   and?: ?Array< ?ModelGalleryFilterInput >,
   or?: ?Array< ?ModelGalleryFilterInput >,
   not?: ?ModelGalleryFilterInput,
-|};
-
-export type ModelBackgroundFilterInput = {|
-  id?: ?ModelIDInput,
-  title?: ?ModelStringInput,
-  uri?: ?ModelStringInput,
-  and?: ?Array< ?ModelBackgroundFilterInput >,
-  or?: ?Array< ?ModelBackgroundFilterInput >,
-  not?: ?ModelBackgroundFilterInput,
 |};
 
 export type CreateElementMutationVariables = {|
@@ -623,63 +587,6 @@ export type DeleteGalleryMutation = {|
   deleteGallery: ? {|
     __typename: "Gallery",
     id: string,
-    uri: string,
-    _version: number,
-    _deleted: ?boolean,
-    _lastChangedAt: number,
-    createdAt: any,
-    updatedAt: any,
-  |},
-|};
-
-export type CreateBackgroundMutationVariables = {|
-  input: CreateBackgroundInput,
-  condition?: ?ModelBackgroundConditionInput,
-|};
-
-export type CreateBackgroundMutation = {|
-  createBackground: ? {|
-    __typename: "Background",
-    id: string,
-    title: string,
-    uri: string,
-    _version: number,
-    _deleted: ?boolean,
-    _lastChangedAt: number,
-    createdAt: any,
-    updatedAt: any,
-  |},
-|};
-
-export type UpdateBackgroundMutationVariables = {|
-  input: UpdateBackgroundInput,
-  condition?: ?ModelBackgroundConditionInput,
-|};
-
-export type UpdateBackgroundMutation = {|
-  updateBackground: ? {|
-    __typename: "Background",
-    id: string,
-    title: string,
-    uri: string,
-    _version: number,
-    _deleted: ?boolean,
-    _lastChangedAt: number,
-    createdAt: any,
-    updatedAt: any,
-  |},
-|};
-
-export type DeleteBackgroundMutationVariables = {|
-  input: DeleteBackgroundInput,
-  condition?: ?ModelBackgroundConditionInput,
-|};
-
-export type DeleteBackgroundMutation = {|
-  deleteBackground: ? {|
-    __typename: "Background",
-    id: string,
-    title: string,
     uri: string,
     _version: number,
     _deleted: ?boolean,
@@ -1058,75 +965,6 @@ export type ListGallerysQuery = {|
   |},
 |};
 
-export type SyncBackgroundsQueryVariables = {|
-  filter?: ?ModelBackgroundFilterInput,
-  limit?: ?number,
-  nextToken?: ?string,
-  lastSync?: ?number,
-|};
-
-export type SyncBackgroundsQuery = {|
-  syncBackgrounds: ? {|
-    __typename: "ModelBackgroundConnection",
-    items: ? Array<? {|
-      __typename: "Background",
-      id: string,
-      title: string,
-      uri: string,
-      _version: number,
-      _deleted: ?boolean,
-      _lastChangedAt: number,
-      createdAt: any,
-      updatedAt: any,
-    |} >,
-    nextToken: ?string,
-    startedAt: ?number,
-  |},
-|};
-
-export type GetBackgroundQueryVariables = {|
-  id: string,
-|};
-
-export type GetBackgroundQuery = {|
-  getBackground: ? {|
-    __typename: "Background",
-    id: string,
-    title: string,
-    uri: string,
-    _version: number,
-    _deleted: ?boolean,
-    _lastChangedAt: number,
-    createdAt: any,
-    updatedAt: any,
-  |},
-|};
-
-export type ListBackgroundsQueryVariables = {|
-  filter?: ?ModelBackgroundFilterInput,
-  limit?: ?number,
-  nextToken?: ?string,
-|};
-
-export type ListBackgroundsQuery = {|
-  listBackgrounds: ? {|
-    __typename: "ModelBackgroundConnection",
-    items: ? Array<? {|
-      __typename: "Background",
-      id: string,
-      title: string,
-      uri: string,
-      _version: number,
-      _deleted: ?boolean,
-      _lastChangedAt: number,
-      createdAt: any,
-      updatedAt: any,
-    |} >,
-    nextToken: ?string,
-    startedAt: ?number,
-  |},
-|};
-
 export type OnCreateElementSubscriptionVariables = {|
   owner: string,
 |};
@@ -1412,60 +1250,6 @@ export type OnDeleteGallerySubscription = {|
   onDeleteGallery: ? {|
     __typename: "Gallery",
     id: string,
-    uri: string,
-    _version: number,
-    _deleted: ?boolean,
-    _lastChangedAt: number,
-    createdAt: any,
-    updatedAt: any,
-  |},
-|};
-
-export type OnCreateBackgroundSubscriptionVariables = {|
-  owner: string,
-|};
-
-export type OnCreateBackgroundSubscription = {|
-  onCreateBackground: ? {|
-    __typename: "Background",
-    id: string,
-    title: string,
-    uri: string,
-    _version: number,
-    _deleted: ?boolean,
-    _lastChangedAt: number,
-    createdAt: any,
-    updatedAt: any,
-  |},
-|};
-
-export type OnUpdateBackgroundSubscriptionVariables = {|
-  owner: string,
-|};
-
-export type OnUpdateBackgroundSubscription = {|
-  onUpdateBackground: ? {|
-    __typename: "Background",
-    id: string,
-    title: string,
-    uri: string,
-    _version: number,
-    _deleted: ?boolean,
-    _lastChangedAt: number,
-    createdAt: any,
-    updatedAt: any,
-  |},
-|};
-
-export type OnDeleteBackgroundSubscriptionVariables = {|
-  owner: string,
-|};
-
-export type OnDeleteBackgroundSubscription = {|
-  onDeleteBackground: ? {|
-    __typename: "Background",
-    id: string,
-    title: string,
     uri: string,
     _version: number,
     _deleted: ?boolean,

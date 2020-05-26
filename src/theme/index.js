@@ -66,7 +66,8 @@ const DarkTheme = {
     backgroundColor2: '#222325',
     text: '#ffffff',
     text2: '#707070',
-    text3: '#D1CDCD'
+    text3: '#D1CDCD',
+    red: '#ff06f4'
   },
   h0: {
     ...h0
@@ -109,7 +110,8 @@ const LightTheme = {
     backgroundColor: '#ffffff',
     backgroundColor2: '#ffffff',
     text: '#1D1E1F',
-    placeholderTextColor: '#707070'
+    placeholderTextColor: '#707070',
+    red: '#ff06f4'
   },
   h0: {
     ...h0

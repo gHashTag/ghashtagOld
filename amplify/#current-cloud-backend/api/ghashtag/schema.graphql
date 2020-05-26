@@ -35,9 +35,3 @@ type Gallery @model @auth(rules: [{ allow: owner, ownerField: "owner", operation
   id: ID!
   uri: String!
 }
-
-type Background @model @auth(rules: [{ allow: owner, ownerField: "owner", operations: [create, update, delete] }]) {
-  id: ID!
-  title: String!
-  uri: String!
-}

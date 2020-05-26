@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
   subClean: {
     flex: 1
   },
-  statusBar: { padding: 5, paddingTop: 5 }
+  statusBar: { padding: 3 }
 })
 
 const AppContainer = memo(
@@ -47,7 +47,7 @@ const AppContainer = memo(
           visible={message !== ''}
           message={message}
           backgroundColor={red}
-          color="red"
+          color="#fff"
           pulse="background"
           height={40}
           style={statusBar}

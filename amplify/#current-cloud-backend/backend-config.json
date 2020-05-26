@@ -1,6 +1,6 @@
 {
 	"auth": {
-		"ghashtag516f577f": {
+		"ghashtagf143d40b": {
 			"service": "Cognito",
 			"providerPlugin": "awscloudformation",
 			"dependsOn": [],
@@ -17,7 +17,7 @@
 					"defaultAuthentication": {
 						"authenticationType": "AMAZON_COGNITO_USER_POOLS",
 						"userPoolConfig": {
-							"userPoolId": "authghashtag516f577f"
+							"userPoolId": "authghashtagf143d40b"
 						}
 					}
 				}
