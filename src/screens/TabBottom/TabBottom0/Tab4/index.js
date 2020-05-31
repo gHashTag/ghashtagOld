@@ -32,7 +32,7 @@ const Tab4 = memo<Tab4T>(() => {
   const getData = async () => {
     setLoading(true)
     try {
-      const elements = await DataStore.query(Element, c => c.earth('eq', true))
+      const elements = await DataStore.query(Element, (c) => c.earth('eq', true))
       dispatch({ type: 'QUERY', elements })
       setLoading(false)
     } catch (err) {
@@ -53,7 +53,7 @@ const Tab4 = memo<Tab4T>(() => {
   }, [])
 
   const { elements } = state
-  const count = elements.filter(x => x.earth).length
+  const count = elements.filter((x) => x.earth).length
   const { container } = styles
   return (
     <BG title={dark ? 'shakti4B' : 'shakti4W'} loading={loading}>

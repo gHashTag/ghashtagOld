@@ -4,7 +4,7 @@ type Element @model @auth(rules: [{ allow: owner, ownerField: "owner", operation
   fire: Boolean!
   water: Boolean!
   earth: Boolean!
-  owner: String!
+  owner: String
 }
 
 type Playlist @model @auth(rules: [{ allow: owner, ownerField: "owner", operations: [create, update, delete] }]) {
@@ -14,6 +14,7 @@ type Playlist @model @auth(rules: [{ allow: owner, ownerField: "owner", operatio
   artist: String!
   artwork: String!
   duration: Int
+  owner: String
 }
 
 type Radio @model @auth(rules: [{ allow: owner, ownerField: "owner", operations: [create, update, delete] }]) {
@@ -23,15 +24,19 @@ type Radio @model @auth(rules: [{ allow: owner, ownerField: "owner", operations:
   title: String!
   cover: String!
   uri: String!
+  owner: String
 }
 
 type Image @model @auth(rules: [{ allow: owner, ownerField: "owner", operations: [create, update, delete] }]) {
   id: ID!
   title: String!
   uri: String!
+  owner: String
 }
 
 type Gallery @model @auth(rules: [{ allow: owner, ownerField: "owner", operations: [create, update, delete] }]) {
   id: ID!
   uri: String!
+  owner: String
 }
+

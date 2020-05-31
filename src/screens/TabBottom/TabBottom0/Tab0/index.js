@@ -30,7 +30,7 @@ const Tab0 = memo<Tab0T>(() => {
 
   const getData = async () => {
     try {
-      const elements = await DataStore.query(Element, c => c.fire('eq', true))
+      const elements = await DataStore.query(Element, (c) => c.fire('eq', true))
       dispatch({ type: 'QUERY', elements })
       setLoading(false)
     } catch (err) {

@@ -10,7 +10,7 @@ const SignUp = ({ navigation }) => {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
 
-  const _onPress = async values => {
+  const _onPress = async (values) => {
     const { email, password, passwordConfirmation } = values
     if (password !== passwordConfirmation) {
       setError('Passwords do not match!')
@@ -44,18 +44,12 @@ const SignUp = ({ navigation }) => {
       <AppContainer onPress={goBack(navigation)} title=" " loading={loading}>
         <Space height={80} />
         <Formik
-          initialValues={{ email: '', password: '', passwordConfirmation: '' }}
-          onSubmit={values => _onPress(values)}
+          initialValues={{ email: 'raoffonom@icloud.com', password: 'qwerty123', passwordConfirmation: 'qwerty123' }}
+          onSubmit={(values) => _onPress(values)}
           validationSchema={Yup.object().shape({
-            email: Yup.string()
-              .email()
-              .required(),
-            password: Yup.string()
-              .min(6)
-              .required(),
-            passwordConfirmation: Yup.string()
-              .min(6)
-              .required()
+            email: Yup.string().email().required(),
+            password: Yup.string().min(6).required(),
+            passwordConfirmation: Yup.string().min(6).required()
           })}
         >
           {({ values, handleChange, errors, setFieldTouched, touched, isValid, handleSubmit }) => (

@@ -61,6 +61,7 @@ export const onCreatePlaylist = /* GraphQL */ `
       artist
       artwork
       duration
+      owner
       _version
       _deleted
       _lastChangedAt
@@ -78,6 +79,7 @@ export const onUpdatePlaylist = /* GraphQL */ `
       artist
       artwork
       duration
+      owner
       _version
       _deleted
       _lastChangedAt
@@ -95,6 +97,7 @@ export const onDeletePlaylist = /* GraphQL */ `
       artist
       artwork
       duration
+      owner
       _version
       _deleted
       _lastChangedAt
@@ -112,6 +115,7 @@ export const onCreateRadio = /* GraphQL */ `
       title
       cover
       uri
+      owner
       _version
       _deleted
       _lastChangedAt
@@ -129,6 +133,7 @@ export const onUpdateRadio = /* GraphQL */ `
       title
       cover
       uri
+      owner
       _version
       _deleted
       _lastChangedAt
@@ -146,6 +151,7 @@ export const onDeleteRadio = /* GraphQL */ `
       title
       cover
       uri
+      owner
       _version
       _deleted
       _lastChangedAt
@@ -160,6 +166,7 @@ export const onCreateImage = /* GraphQL */ `
       id
       title
       uri
+      owner
       _version
       _deleted
       _lastChangedAt
@@ -174,6 +181,7 @@ export const onUpdateImage = /* GraphQL */ `
       id
       title
       uri
+      owner
       _version
       _deleted
       _lastChangedAt
@@ -188,6 +196,7 @@ export const onDeleteImage = /* GraphQL */ `
       id
       title
       uri
+      owner
       _version
       _deleted
       _lastChangedAt
@@ -201,6 +210,7 @@ export const onCreateGallery = /* GraphQL */ `
     onCreateGallery(owner: $owner) {
       id
       uri
+      owner
       _version
       _deleted
       _lastChangedAt
@@ -214,6 +224,7 @@ export const onUpdateGallery = /* GraphQL */ `
     onUpdateGallery(owner: $owner) {
       id
       uri
+      owner
       _version
       _deleted
       _lastChangedAt
@@ -227,6 +238,7 @@ export const onDeleteGallery = /* GraphQL */ `
     onDeleteGallery(owner: $owner) {
       id
       uri
+      owner
       _version
       _deleted
       _lastChangedAt

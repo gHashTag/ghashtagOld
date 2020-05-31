@@ -9,7 +9,6 @@
 import React, { useState } from 'react'
 import { AppearanceProvider } from 'react-native-appearance'
 import Amplify from '@aws-amplify/core'
-import PubSub from '@aws-amplify/pubsub'
 import * as Keychain from 'react-native-keychain'
 import { AmplifyProvider } from 'aws-amplify-react-hooks'
 import { Auth, API, graphqlOperation } from 'aws-amplify'
@@ -66,8 +65,6 @@ Amplify.configure({
   },
   storage: MyStorage
 })
-
-PubSub.configure(awsconfig)
 
 const App: () => React$Node = () => {
   const [value] = useState(false)

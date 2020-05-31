@@ -73,6 +73,7 @@ export const createPlaylist = /* GraphQL */ `
       artist
       artwork
       duration
+      owner
       _version
       _deleted
       _lastChangedAt
@@ -93,6 +94,7 @@ export const updatePlaylist = /* GraphQL */ `
       artist
       artwork
       duration
+      owner
       _version
       _deleted
       _lastChangedAt
@@ -113,6 +115,7 @@ export const deletePlaylist = /* GraphQL */ `
       artist
       artwork
       duration
+      owner
       _version
       _deleted
       _lastChangedAt
@@ -133,6 +136,7 @@ export const createRadio = /* GraphQL */ `
       title
       cover
       uri
+      owner
       _version
       _deleted
       _lastChangedAt
@@ -153,6 +157,7 @@ export const updateRadio = /* GraphQL */ `
       title
       cover
       uri
+      owner
       _version
       _deleted
       _lastChangedAt
@@ -173,6 +178,7 @@ export const deleteRadio = /* GraphQL */ `
       title
       cover
       uri
+      owner
       _version
       _deleted
       _lastChangedAt
@@ -190,6 +196,7 @@ export const createImage = /* GraphQL */ `
       id
       title
       uri
+      owner
       _version
       _deleted
       _lastChangedAt
@@ -207,6 +214,7 @@ export const updateImage = /* GraphQL */ `
       id
       title
       uri
+      owner
       _version
       _deleted
       _lastChangedAt
@@ -224,6 +232,7 @@ export const deleteImage = /* GraphQL */ `
       id
       title
       uri
+      owner
       _version
       _deleted
       _lastChangedAt
@@ -240,6 +249,7 @@ export const createGallery = /* GraphQL */ `
     createGallery(input: $input, condition: $condition) {
       id
       uri
+      owner
       _version
       _deleted
       _lastChangedAt
@@ -256,6 +266,7 @@ export const updateGallery = /* GraphQL */ `
     updateGallery(input: $input, condition: $condition) {
       id
       uri
+      owner
       _version
       _deleted
       _lastChangedAt
@@ -272,6 +283,7 @@ export const deleteGallery = /* GraphQL */ `
     deleteGallery(input: $input, condition: $condition) {
       id
       uri
+      owner
       _version
       _deleted
       _lastChangedAt

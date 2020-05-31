@@ -35,7 +35,7 @@ const Tab2 = memo<Tab2T>(({ navigation }) => {
         page: 0,
         limit: 1000
       })
-      console.log('elements', elements)
+      //console.log('elements', elements)
       //const job = await DataStore.query(Element, 'f609910e-a66d-45c1-a46d-38a149d6dccd')
       //await DataStore.delete(job)
       dispatch({ type: 'QUERY', elements })
@@ -63,13 +63,11 @@ const Tab2 = memo<Tab2T>(({ navigation }) => {
         setUser(false)
       }
     } catch (err) {
-      console.log('error', err) // eslint-disable-line
       setLoading(false)
     }
   }
 
   useEffect(() => {
-    console.log('getdata')
     setLoading(true)
     key()
     getData()

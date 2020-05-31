@@ -42,8 +42,8 @@ const TabBottom4 = memo<TabBottom4T>(({ navigation }) => {
     // await DataStore.delete()
     try {
       const owner = Auth.user.attributes.sub
-      const element = await DataStore.query(Element, c => c.owner('eq', owner))
-      setElem(element[0])
+      const element = await DataStore.query(Element, (c) => c.owner('eq', owner))
+      element[0] && setElem(element[0])
       setLoading(false)
     } catch (err) {
       setLoading(false)
@@ -64,6 +64,7 @@ const TabBottom4 = memo<TabBottom4T>(({ navigation }) => {
         const user = await Auth.signIn(username, password)
         setLoading(false)
         user && setUser(true)
+        getData()
       } else {
         setLoading(false)
         setUser(false)
@@ -77,7 +78,6 @@ const TabBottom4 = memo<TabBottom4T>(({ navigation }) => {
   useEffect(() => {
     key()
     setLoading(true)
-    getData()
     const subscription = DataStore.observe(Element).subscribe(() => getData())
     return () => {
       subscription.unsubscribe()

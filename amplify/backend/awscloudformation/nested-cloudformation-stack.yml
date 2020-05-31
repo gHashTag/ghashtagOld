@@ -68,15 +68,15 @@
 				}
 			}
 		},
-		"authghashtagf143d40b": {
+		"authghashtagb1a36f90": {
 			"Type": "AWS::CloudFormation::Stack",
 			"Properties": {
-				"TemplateURL": "https://s3.amazonaws.com/amplify-ghashtag-prod-103819-deployment/amplify-cfn-templates/auth/ghashtagf143d40b-cloudformation-template.yml",
+				"TemplateURL": "https://s3.amazonaws.com/amplify-ghashtag-prod-145452-deployment/amplify-cfn-templates/auth/ghashtagb1a36f90-cloudformation-template.yml",
 				"Parameters": {
-					"identityPoolName": "ghashtagf143d40b_identitypool_f143d40b",
+					"identityPoolName": "ghashtagb1a36f90_identitypool_b1a36f90",
 					"allowUnauthenticatedIdentities": false,
-					"resourceNameTruncated": "ghashtf143d40b",
-					"userPoolName": "ghashtagf143d40b_userpool_f143d40b",
+					"resourceNameTruncated": "ghashtb1a36f90",
+					"userPoolName": "ghashtagb1a36f90_userpool_b1a36f90",
 					"autoVerifiedAttributes": "email",
 					"mfaConfiguration": "OFF",
 					"mfaTypes": "SMS Text Message",
@@ -92,10 +92,10 @@
 					"userpoolClientRefreshTokenValidity": 30,
 					"userpoolClientWriteAttributes": "email",
 					"userpoolClientReadAttributes": "email",
-					"userpoolClientLambdaRole": "ghashtf143d40b_userpoolclient_lambda_role",
+					"userpoolClientLambdaRole": "ghashtb1a36f90_userpoolclient_lambda_role",
 					"userpoolClientSetAttributes": false,
-					"sharedId": "f143d40b",
-					"resourceName": "ghashtagf143d40b",
+					"sharedId": "b1a36f90",
+					"resourceName": "ghashtagb1a36f90",
 					"authSelections": "identityPoolAndUserPool",
 					"authRoleArn": {
 						"Fn::GetAtt": [
@@ -120,7 +120,7 @@
 		"apighashtag": {
 			"Type": "AWS::CloudFormation::Stack",
 			"Properties": {
-				"TemplateURL": "https://s3.amazonaws.com/amplify-ghashtag-prod-103819-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+				"TemplateURL": "https://s3.amazonaws.com/amplify-ghashtag-prod-145452-deployment/amplify-cfn-templates/api/cloudformation-template.json",
 				"Parameters": {
 					"CreateAPIKey": 0,
 					"AppSyncApiName": "ghashtag",
@@ -128,12 +128,12 @@
 					"DynamoDBEnableServerSideEncryption": "false",
 					"AuthCognitoUserPoolId": {
 						"Fn::GetAtt": [
-							"authghashtagf143d40b",
+							"authghashtagb1a36f90",
 							"Outputs.UserPoolId"
 						]
 					},
-					"S3DeploymentBucket": "amplify-ghashtag-prod-103819-deployment",
-					"S3DeploymentRootKey": "amplify-appsync-files/3f8352f546b82b842a276ae3360d4936a3e19109",
+					"S3DeploymentBucket": "amplify-ghashtag-prod-145452-deployment",
+					"S3DeploymentRootKey": "amplify-appsync-files/3a6625b7ac0528808d41398a0268d5512ee910de",
 					"env": "prod"
 				}
 			}
@@ -142,7 +142,7 @@
 			"DependsOn": [
 				"AuthRole",
 				"UnauthRole",
-				"authghashtagf143d40b"
+				"authghashtagb1a36f90"
 			],
 			"Type": "AWS::Lambda::Function",
 			"Properties": {
@@ -225,7 +225,7 @@
 				},
 				"idpId": {
 					"Fn::GetAtt": [
-						"authghashtagf143d40b",
+						"authghashtagb1a36f90",
 						"Outputs.IdentityPoolId"
 					]
 				},

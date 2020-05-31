@@ -94,6 +94,7 @@ export const syncPlaylists = /* GraphQL */ `
         artist
         artwork
         duration
+        owner
         _version
         _deleted
         _lastChangedAt
@@ -114,6 +115,7 @@ export const getPlaylist = /* GraphQL */ `
       artist
       artwork
       duration
+      owner
       _version
       _deleted
       _lastChangedAt
@@ -136,6 +138,7 @@ export const listPlaylists = /* GraphQL */ `
         artist
         artwork
         duration
+        owner
         _version
         _deleted
         _lastChangedAt
@@ -167,6 +170,7 @@ export const syncRadios = /* GraphQL */ `
         title
         cover
         uri
+        owner
         _version
         _deleted
         _lastChangedAt
@@ -187,6 +191,7 @@ export const getRadio = /* GraphQL */ `
       title
       cover
       uri
+      owner
       _version
       _deleted
       _lastChangedAt
@@ -209,6 +214,7 @@ export const listRadios = /* GraphQL */ `
         title
         cover
         uri
+        owner
         _version
         _deleted
         _lastChangedAt
@@ -237,6 +243,7 @@ export const syncImages = /* GraphQL */ `
         id
         title
         uri
+        owner
         _version
         _deleted
         _lastChangedAt
@@ -254,6 +261,7 @@ export const getImage = /* GraphQL */ `
       id
       title
       uri
+      owner
       _version
       _deleted
       _lastChangedAt
@@ -273,6 +281,7 @@ export const listImages = /* GraphQL */ `
         id
         title
         uri
+        owner
         _version
         _deleted
         _lastChangedAt
@@ -300,6 +309,7 @@ export const syncGalleries = /* GraphQL */ `
       items {
         id
         uri
+        owner
         _version
         _deleted
         _lastChangedAt
@@ -316,6 +326,7 @@ export const getGallery = /* GraphQL */ `
     getGallery(id: $id) {
       id
       uri
+      owner
       _version
       _deleted
       _lastChangedAt
@@ -334,6 +345,7 @@ export const listGallerys = /* GraphQL */ `
       items {
         id
         uri
+        owner
         _version
         _deleted
         _lastChangedAt
