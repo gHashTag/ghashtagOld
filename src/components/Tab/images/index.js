@@ -20,7 +20,7 @@ export const ICONS = [
     title: 'TabBottom2'
   },
   {
-    path: require('./TabBottom2.png'),
+    path: require('./TabBottom2Disable.png'),
     title: 'TabBottom2Disable'
   },
   {
@@ -30,14 +30,6 @@ export const ICONS = [
   {
     path: require('./TabBottom3Disable.png'),
     title: 'TabBottom3Disable'
-  },
-  {
-    path: require('./TabBottom4.png'),
-    title: 'TabBottom4'
-  },
-  {
-    path: require('./TabBottom4Disable.png'),
-    title: 'TabBottom4Disable'
   },
   {
     path: require('./TabTop0B.png'),
