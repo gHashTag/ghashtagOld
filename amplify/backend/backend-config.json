@@ -1,1 +1,27 @@
-{}
+{
+	"auth": {
+		"ghashtagfb6b86ee": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [],
+			"customAuth": false
+		}
+	},
+	"api": {
+		"ghashtag": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"authConfig": {
+					"additionalAuthenticationProviders": [],
+					"defaultAuthentication": {
+						"authenticationType": "AMAZON_COGNITO_USER_POOLS",
+						"userPoolConfig": {
+							"userPoolId": "authghashtagfb6b86ee"
+						}
+					}
+				}
+			}
+		}
+	}
+}

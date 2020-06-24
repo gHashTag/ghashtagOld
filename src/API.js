@@ -1001,10 +1001,6 @@ export type ListGallerysQuery = {|
   |},
 |};
 
-export type OnCreateElementSubscriptionVariables = {|
-  owner: string,
-|};
-
 export type OnCreateElementSubscription = {|
   onCreateElement: ? {|
     __typename: "Element",
@@ -1020,10 +1016,6 @@ export type OnCreateElementSubscription = {|
     createdAt: any,
     updatedAt: any,
   |},
-|};
-
-export type OnUpdateElementSubscriptionVariables = {|
-  owner: string,
 |};
 
 export type OnUpdateElementSubscription = {|
@@ -1043,10 +1035,6 @@ export type OnUpdateElementSubscription = {|
   |},
 |};
 
-export type OnDeleteElementSubscriptionVariables = {|
-  owner: string,
-|};
-
 export type OnDeleteElementSubscription = {|
   onDeleteElement: ? {|
     __typename: "Element",
@@ -1062,10 +1050,6 @@ export type OnDeleteElementSubscription = {|
     createdAt: any,
     updatedAt: any,
   |},
-|};
-
-export type OnCreatePlaylistSubscriptionVariables = {|
-  owner: string,
 |};
 
 export type OnCreatePlaylistSubscription = {|
@@ -1086,10 +1070,6 @@ export type OnCreatePlaylistSubscription = {|
   |},
 |};
 
-export type OnUpdatePlaylistSubscriptionVariables = {|
-  owner: string,
-|};
-
 export type OnUpdatePlaylistSubscription = {|
   onUpdatePlaylist: ? {|
     __typename: "Playlist",
@@ -1106,10 +1086,6 @@ export type OnUpdatePlaylistSubscription = {|
     createdAt: any,
     updatedAt: any,
   |},
-|};
-
-export type OnDeletePlaylistSubscriptionVariables = {|
-  owner: string,
 |};
 
 export type OnDeletePlaylistSubscription = {|
@@ -1130,10 +1106,6 @@ export type OnDeletePlaylistSubscription = {|
   |},
 |};
 
-export type OnCreateRadioSubscriptionVariables = {|
-  owner: string,
-|};
-
 export type OnCreateRadioSubscription = {|
   onCreateRadio: ? {|
     __typename: "Radio",
@@ -1150,10 +1122,6 @@ export type OnCreateRadioSubscription = {|
     createdAt: any,
     updatedAt: any,
   |},
-|};
-
-export type OnUpdateRadioSubscriptionVariables = {|
-  owner: string,
 |};
 
 export type OnUpdateRadioSubscription = {|
@@ -1174,10 +1142,6 @@ export type OnUpdateRadioSubscription = {|
   |},
 |};
 
-export type OnDeleteRadioSubscriptionVariables = {|
-  owner: string,
-|};
-
 export type OnDeleteRadioSubscription = {|
   onDeleteRadio: ? {|
     __typename: "Radio",
@@ -1196,10 +1160,6 @@ export type OnDeleteRadioSubscription = {|
   |},
 |};
 
-export type OnCreateImageSubscriptionVariables = {|
-  owner: string,
-|};
-
 export type OnCreateImageSubscription = {|
   onCreateImage: ? {|
     __typename: "Image",
@@ -1213,10 +1173,6 @@ export type OnCreateImageSubscription = {|
     createdAt: any,
     updatedAt: any,
   |},
-|};
-
-export type OnUpdateImageSubscriptionVariables = {|
-  owner: string,
 |};
 
 export type OnUpdateImageSubscription = {|
@@ -1234,10 +1190,6 @@ export type OnUpdateImageSubscription = {|
   |},
 |};
 
-export type OnDeleteImageSubscriptionVariables = {|
-  owner: string,
-|};
-
 export type OnDeleteImageSubscription = {|
   onDeleteImage: ? {|
     __typename: "Image",
@@ -1251,10 +1203,6 @@ export type OnDeleteImageSubscription = {|
     createdAt: any,
     updatedAt: any,
   |},
-|};
-
-export type OnCreateGallerySubscriptionVariables = {|
-  owner: string,
 |};
 
 export type OnCreateGallerySubscription = {|
@@ -1271,10 +1219,6 @@ export type OnCreateGallerySubscription = {|
   |},
 |};
 
-export type OnUpdateGallerySubscriptionVariables = {|
-  owner: string,
-|};
-
 export type OnUpdateGallerySubscription = {|
   onUpdateGallery: ? {|
     __typename: "Gallery",
@@ -1287,10 +1231,6 @@ export type OnUpdateGallerySubscription = {|
     createdAt: any,
     updatedAt: any,
   |},
-|};
-
-export type OnDeleteGallerySubscriptionVariables = {|
-  owner: string,
 |};
 
 export type OnDeleteGallerySubscription = {|
