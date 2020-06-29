@@ -17,16 +17,6 @@ type Playlist @model @auth(rules: [{ allow: owner, ownerField: "owner", operatio
   owner: String
 }
 
-type Radio @model @auth(rules: [{ allow: owner, ownerField: "owner", operations: [create, update, delete] }]) {
-  id: ID!
-  artist: String!
-  album: String!
-  title: String!
-  cover: String!
-  uri: String!
-  owner: String
-}
-
 type Image @model @auth(rules: [{ allow: owner, ownerField: "owner", operations: [create, update, delete] }]) {
   id: ID!
   title: String!

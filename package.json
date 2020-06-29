@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "start": "npx react-native start",
     "ios": "npx react-native run-ios --simulator='iPhone SE'",
     "android": "npx react-native run-android",
     "lint": "esw src/**",
@@ -13,15 +14,15 @@
   },
   "precommit": "lint",
   "dependencies": {
-    "@aws-amplify/core": "^3.3.2",
-    "@aws-amplify/datastore": "^2.2.2",
+    "@aws-amplify/core": "^3.4.0",
+    "@aws-amplify/datastore": "^2.2.4",
     "@react-native-community/async-storage": "^1.11.0",
     "@react-native-community/netinfo": "^5.9.2",
     "@react-navigation/native": "^5.4.2",
     "@react-navigation/native-stack": "^5.0.5",
     "amazon-cognito-identity-js": "^4.3.0",
     "amplify-app": "2.13.2",
-    "aws-amplify": "^3.0.16",
+    "aws-amplify": "^3.0.18",
     "aws-amplify-react-hooks": "^1.0.13",
     "aws-amplify-react-native": "^4.2.0",
     "faker": "^4.1.0",
@@ -41,11 +42,6 @@
     "react-native-swift": "^1.2.3",
     "react-native-track-player": "^1.2.3",
     "react-native-vector-icons": "^6.6.0",
-    "react-redux": "^7.2.0",
-    "redux": "^4.0.5",
-    "redux-devtools-extension": "^2.13.8",
-    "redux-thunk": "^2.3.0",
-    "thunk": "^0.0.1",
     "yup": "^0.29.0"
   },
   "devDependencies": {

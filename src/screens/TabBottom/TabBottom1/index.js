@@ -25,11 +25,9 @@ const TabBottom1 = memo<TabBottom1T>(() => {
     try {
       const array = await DataStore.query(Gallery, Predicates.ALL, {
         page: 0,
-        limit: 1000
+        limit: 100
       })
-      //console.log('array', array)
-      //const job = await DataStore.query(Element, 'f609910e-a66d-45c1-a46d-38a149d6dccd')
-      //await DataStore.delete(job)
+      console.log('array', array)
       setElem(array)
       setLoading(false)
     } catch (err) {
@@ -46,7 +44,7 @@ const TabBottom1 = memo<TabBottom1T>(() => {
 
   // const deleteJob = async () => {
   //   //await DataStore.clear(Gallery)
-  //   const job = await DataStore.query(Gallery, 'eac78c40-f390-4023-8978-848e6861c7e3')
+  //   const job = await DataStore.query(Gallery, '297211eb-d5ae-496c-a099-5e7417efbc75')
   //   const del = await DataStore.delete(job)
   //   console.warn('del', del)
   // }
@@ -57,6 +55,7 @@ const TabBottom1 = memo<TabBottom1T>(() => {
     setLoading(true)
     getData()
   }, [])
+
   return (
     <>
       {loading ? (

@@ -124,69 +124,6 @@ export const deletePlaylist = /* GraphQL */ `
     }
   }
 `;
-export const createRadio = /* GraphQL */ `
-  mutation CreateRadio(
-    $input: CreateRadioInput!
-    $condition: ModelRadioConditionInput
-  ) {
-    createRadio(input: $input, condition: $condition) {
-      id
-      artist
-      album
-      title
-      cover
-      uri
-      owner
-      _version
-      _deleted
-      _lastChangedAt
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const updateRadio = /* GraphQL */ `
-  mutation UpdateRadio(
-    $input: UpdateRadioInput!
-    $condition: ModelRadioConditionInput
-  ) {
-    updateRadio(input: $input, condition: $condition) {
-      id
-      artist
-      album
-      title
-      cover
-      uri
-      owner
-      _version
-      _deleted
-      _lastChangedAt
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const deleteRadio = /* GraphQL */ `
-  mutation DeleteRadio(
-    $input: DeleteRadioInput!
-    $condition: ModelRadioConditionInput
-  ) {
-    deleteRadio(input: $input, condition: $condition) {
-      id
-      artist
-      album
-      title
-      cover
-      uri
-      owner
-      _version
-      _deleted
-      _lastChangedAt
-      createdAt
-      updatedAt
-    }
-  }
-`;
 export const createImage = /* GraphQL */ `
   mutation CreateImage(
     $input: CreateImageInput!

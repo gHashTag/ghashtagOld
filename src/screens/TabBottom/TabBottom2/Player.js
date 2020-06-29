@@ -1,24 +1,20 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import AsyncStorage from '@react-native-community/async-storage'
+import { Platform, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import TrackPlayer, { useTrackPlayerProgress, usePlaybackState, useTrackPlayerEvents } from 'react-native-track-player'
-import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { useTheme } from '@react-navigation/native'
+import { H1, H5, Space } from '../../../components'
+import { W } from '../../../constants'
 
 const styles = StyleSheet.create({
   cardStyle: {
     width: '80%',
-    elevation: 1,
-    borderRadius: 4,
-    shadowRadius: 2,
-    shadowOpacity: 0.1,
-    alignItems: 'center',
-    shadowColor: 'black',
-    backgroundColor: 'white',
-    shadowOffset: { width: 0, height: 1 }
+    alignItems: 'center'
   },
   coverStyle: {
-    width: 140,
-    height: 140,
-    marginTop: 20,
-    backgroundColor: 'grey'
+    width: 240,
+    height: 240,
+    backgroundColor: 'transparent'
   },
   progress: {
     height: 1,
@@ -40,63 +36,60 @@ const styles = StyleSheet.create({
     flex: 1
   },
   controlButtonText: {
-    fontSize: 18,
+    fontSize: 40,
+    textAlign: 'center',
+    fontFamily: Platform.OS === 'ios' ? 'The Dolbak' : 'TheDolbak-Brush'
+  },
+  h: {
+    width: W - 100,
     textAlign: 'center'
   }
 })
 
 const ProgressBar = () => {
   const progress = useTrackPlayerProgress()
-
+  const {
+    colors: { secondary }
+  } = useTheme()
   return (
     <View style={styles.progress}>
-      <View style={{ flex: progress.position, backgroundColor: 'blue' }} />
+      <View style={{ flex: progress.position, backgroundColor: secondary }} />
       <View
         style={{
           flex: progress.duration - progress.position,
           backgroundColor: 'grey'
         }}
-        k
       />
     </View>
   )
 }
 
-const {
-  controlButtonContainer,
-  controlButtonText,
-  cardStyle,
-  artistStyle,
-  coverStyle,
-  controlsStyle,
-  titleStyle
-} = styles
+const { controlButtonContainer, controlButtonText, cardStyle, coverStyle, controlsStyle, h } = styles
 
 function ControlButton({ title, onPress }) {
+  const {
+    dark,
+    colors: { secondary, primary }
+  } = useTheme()
   return (
     <TouchableOpacity style={controlButtonContainer} onPress={onPress}>
-      <Text style={controlButtonText}>{title}</Text>
+      <Text style={[controlButtonText, { color: dark ? primary : secondary }]}>{title}</Text>
     </TouchableOpacity>
   )
 }
 
-export default function Player(props) {
+const Player = ({ style, onNext, onPrevious, onTogglePlayback }) => {
   const playbackState = usePlaybackState()
-  const [trackTitle, setTrackTitle] = useState('')
-  const [trackArtwork, setTrackArtwork] = useState()
-  const [trackArtist, setTrackArtist] = useState('')
+  const [track, setTrack] = useState('')
 
-  useTrackPlayerEvents(['playback-track-changed'], async event => {
+  useTrackPlayerEvents(['playback-track-changed'], async (event) => {
     if (event.type === TrackPlayer.TrackPlayerEvents.PLAYBACK_TRACK_CHANGED) {
-      const track = await TrackPlayer.getTrack(event.nextTrack)
-      const { title, artist, artwork } = track || {}
-      setTrackTitle(title)
-      setTrackArtist(artist)
-      setTrackArtwork(artwork)
+      const tr = await TrackPlayer.getTrack(event.nextTrack)
+      const jsonValue = JSON.stringify(tr)
+      await AsyncStorage.setItem('@track', jsonValue)
+      setTrack(tr)
     }
   })
-
-  const { style, onNext, onPrevious, onTogglePlayback } = props
 
   var middleButtonText = 'Play' // eslint-disable-line
 
@@ -104,12 +97,32 @@ export default function Player(props) {
     middleButtonText = 'Pause'
   }
 
+  const getData = async () => {
+    try {
+      const jsonValue = await AsyncStorage.getItem('@track')
+      const value = jsonValue != null ? JSON.parse(jsonValue) : null
+      if (value !== null) {
+        setTrack(value)
+      }
+    } catch (e) {
+      // error reading value
+    }
+  }
+
+  useEffect(() => {
+    getData()
+  }, [])
+
+  const { title, artwork, artist } = track
   return (
     <View style={[cardStyle, style]}>
-      <Image style={coverStyle} source={{ uri: trackArtwork }} />
+      <Image style={coverStyle} source={{ uri: artwork }} />
+      <Space height={10} />
       <ProgressBar />
-      <Text style={titleStyle}>{trackTitle}</Text>
-      <Text style={artistStyle}>{trackArtist}</Text>
+      <Space height={10} />
+      <H1 title={title} textStyle={h} />
+      <Space height={10} />
+      <H5 title={artist} textStyle={h} />
       <View style={controlsStyle}>
         <ControlButton title={'<<'} onPress={onPrevious} />
         <ControlButton title={middleButtonText} onPress={onTogglePlayback} />
@@ -118,3 +131,5 @@ export default function Player(props) {
     </View>
   )
 }
+
+export { Player }

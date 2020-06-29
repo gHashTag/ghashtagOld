@@ -6,22 +6,16 @@
  * @flow
  */
 ///* eslint-disable */
-import React, { useState } from 'react'
+import React from 'react'
+import { useColorScheme } from 'react-native'
 import { AppearanceProvider } from 'react-native-appearance'
 import Amplify from '@aws-amplify/core'
 import * as Keychain from 'react-native-keychain'
 import { AmplifyProvider } from 'aws-amplify-react-hooks'
 import { Auth, API, graphqlOperation } from 'aws-amplify'
-import { Provider } from 'react-redux'
-import { createStore, applyMiddleware } from 'redux'
-import { composeWithDevTools } from 'redux-devtools-extension'
-import ReduxThunk from 'redux-thunk'
 import { ThemeProvider, DarkTheme, LightTheme } from './theme'
-import reducers from './reducers'
 import AppNavigator from './AppNavigator'
 import awsconfig from '../aws-exports'
-
-const store = createStore(reducers, composeWithDevTools(applyMiddleware(ReduxThunk)))
 
 const client = {
   Auth,
@@ -67,24 +61,22 @@ Amplify.configure({
 })
 
 const App: () => React$Node = () => {
-  const [value] = useState(false)
-  //const scheme = useColorScheme()
-  const theme = value ? DarkTheme : LightTheme
+  //const [value] = useState(false)
+  const scheme = useColorScheme()
+  const theme = scheme ? DarkTheme : LightTheme
   return (
     <>
       <AppearanceProvider>
         <AmplifyProvider client={client}>
-          <Provider store={store}>
-            <ThemeProvider theme={theme}>
-              <AppNavigator />
-            </ThemeProvider>
-          </Provider>
+          <ThemeProvider theme={theme}>
+            <AppNavigator />
+          </ThemeProvider>
         </AmplifyProvider>
       </AppearanceProvider>
     </>
   )
 }
 
-window.LOG_LEVEL = 'DEBUG'
+//window.LOG_LEVEL = 'DEBUG'
 
 export default App

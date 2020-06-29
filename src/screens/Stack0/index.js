@@ -1,10 +1,11 @@
 // @flow
-import { Analytics } from 'aws-amplify'
-import React, { memo, useEffect, useState } from 'react'
-import AsyncStorage from '@react-native-community/async-storage'
+import { Analytics, Auth } from 'aws-amplify'
+import React, { memo, useEffect, useCallback, useState } from 'react'
+import * as Keychain from 'react-native-keychain'
 import { StyleSheet, View } from 'react-native'
 import { NavigationState, NavigationScreenProp, useTheme } from '@react-navigation/native'
 import { BBB, G, Button, H3, Space, BG } from '../../components'
+import { onScreen } from '../../constants'
 
 const styles = StyleSheet.create({
   container: {
@@ -23,39 +24,43 @@ type Stack0T = {
 
 const Stack0 = memo<Stack0T>(({ navigation }) => {
   const [loading, setLoading] = useState(false)
-  useEffect(() => {
-    setLoading(true)
-    const key = async () => {
-      //await AsyncStorage.removeItem('@id')
-      try {
-        const id = await AsyncStorage.getItem('@id')
-        if (id) {
-          navigation.navigate('TabNavigator')
-          setLoading(false)
-        } else {
-          setLoading(false)
-        }
-      } catch (err) {
-        Analytics.record({
-          name: 'Stack0',
-          attributes: err
-        })
+
+  const key = useCallback(async () => {
+    //await Keychain.resetInternetCredentials('auth')
+    try {
+      const credentials = await Keychain.getInternetCredentials('auth')
+      if (credentials) {
+        const { username, password } = credentials
+        const user = await Auth.signIn(username, password)
+        user && onScreen('MAIN', navigation)()
+        setLoading(false)
+      } else {
         setLoading(false)
       }
+    } catch (err) {
+      setLoading(false)
+      Analytics.record({
+        name: 'Stack0',
+        attributes: err
+      })
     }
-    key()
   }, [navigation])
+
+  useEffect(() => {
+    setLoading(true)
+    key()
+  }, [navigation, key])
 
   const { container, h3 } = styles
   const { dark } = useTheme()
-  const _onPress = () => navigation.navigate('Stack1')
+
   return (
     <BG title={dark ? 'CristalsB' : 'CristalsW'} loading={loading}>
       <View style={container}>
         <Space height={40} />
-        <BBB title={dark ? '999B' : '999W'} onPress={_onPress} />
-        <G title="G" onPress={_onPress} />
-        <Button title="start game" onPress={_onPress} />
+        <BBB title={dark ? '999B' : '999W'} onPress={onScreen('HELLO', navigation)} />
+        <G title="G" onPress={onScreen('HELLO', navigation)} />
+        <Button title="start game" onPress={onScreen('HELLO', navigation)} />
         <Space height={0} />
         <H3 title="@hackthonUnicorn" viewStyle={h3} />
         <Space height={0} />

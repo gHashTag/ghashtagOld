@@ -1,5 +1,5 @@
 // @flow
-import React, { memo, useEffect, useState } from 'react'
+import React, { memo, useEffect, useState, useCallback } from 'react'
 import { Platform, StyleSheet, View } from 'react-native'
 import { Analytics, Auth } from 'aws-amplify'
 import { DataStore } from '@aws-amplify/datastore'
@@ -9,7 +9,7 @@ import type { TextStyleProp, ViewStyleProp } from 'react-native/Libraries/StyleS
 import { NavigationState, NavigationScreenProp, useTheme } from '@react-navigation/native'
 import { Element } from '../../../models'
 import { Space, BG, ButtonMiddle, H1, Button } from '../../../components'
-import { onScreen } from '../../../constants'
+import { onScreen, goHome } from '../../../constants'
 
 const styles = StyleSheet.create({
   container: {
@@ -54,11 +54,9 @@ const TabBottom3 = memo<TabBottom3T>(({ navigation }) => {
     }
   }
 
-  const key = async () => {
-    //await Keychain.resetInternetCredentials('auth')
+  const key = useCallback(async () => {
     try {
       const credentials = await Keychain.getInternetCredentials('auth')
-
       if (credentials) {
         const { username, password } = credentials
         const user = await Auth.signIn(username, password)
@@ -73,7 +71,7 @@ const TabBottom3 = memo<TabBottom3T>(({ navigation }) => {
       console.log('error', err) // eslint-disable-line
       setLoading(false)
     }
-  }
+  }, [])
 
   useEffect(() => {
     key()
@@ -82,7 +80,7 @@ const TabBottom3 = memo<TabBottom3T>(({ navigation }) => {
     return () => {
       subscription.unsubscribe()
     }
-  }, [navigation])
+  }, [navigation, key])
 
   const arr = _(elem).reduce((trues, v, k) => {
     if (v === true) trues.push(k)
@@ -95,6 +93,7 @@ const TabBottom3 = memo<TabBottom3T>(({ navigation }) => {
     await Auth.signOut()
     await Keychain.resetInternetCredentials('auth')
     setUser(false)
+    goHome(navigation)()
   }
 
   return (

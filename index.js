@@ -15,7 +15,9 @@ YellowBox.ignoreWarnings([
   'RCTRootView cancelTouches',
   'not authenticated',
   'Animated: `useNativeDriver`',
-  'Sending `onAnimatedValueUpdate`'
+  'Sending `onAnimatedValueUpdate`',
+  'DataStore - Connection failed:',
+  "Can't perform a React state"
 ])
 
 AppRegistry.registerComponent(appName, () => App)

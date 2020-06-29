@@ -106,60 +106,6 @@ export const onDeletePlaylist = /* GraphQL */ `
     }
   }
 `;
-export const onCreateRadio = /* GraphQL */ `
-  subscription OnCreateRadio {
-    onCreateRadio {
-      id
-      artist
-      album
-      title
-      cover
-      uri
-      owner
-      _version
-      _deleted
-      _lastChangedAt
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const onUpdateRadio = /* GraphQL */ `
-  subscription OnUpdateRadio {
-    onUpdateRadio {
-      id
-      artist
-      album
-      title
-      cover
-      uri
-      owner
-      _version
-      _deleted
-      _lastChangedAt
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const onDeleteRadio = /* GraphQL */ `
-  subscription OnDeleteRadio {
-    onDeleteRadio {
-      id
-      artist
-      album
-      title
-      cover
-      uri
-      owner
-      _version
-      _deleted
-      _lastChangedAt
-      createdAt
-      updatedAt
-    }
-  }
-`;
 export const onCreateImage = /* GraphQL */ `
   subscription OnCreateImage {
     onCreateImage {

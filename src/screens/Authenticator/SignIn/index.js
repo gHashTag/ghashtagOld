@@ -18,7 +18,7 @@ const SignIn = ({ navigation }) => {
       const { email, password } = values
       const user = await Auth.signIn(email, password)
       await Keychain.setInternetCredentials('auth', email, password)
-      user && goHome(navigation)()
+      user && onScreen('MAIN', navigation)()
       setLoading(false)
     } catch (err) {
       setLoading(false)

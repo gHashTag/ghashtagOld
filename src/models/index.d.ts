@@ -27,18 +27,6 @@ export declare class Playlist {
   static copyOf(source: Playlist, mutator: (draft: MutableModel<Playlist>) => MutableModel<Playlist> | void): Playlist;
 }
 
-export declare class Radio {
-  readonly id: string;
-  readonly artist: string;
-  readonly album: string;
-  readonly title: string;
-  readonly cover: string;
-  readonly uri: string;
-  readonly owner?: string;
-  constructor(init: ModelInit<Radio>);
-  static copyOf(source: Radio, mutator: (draft: MutableModel<Radio>) => MutableModel<Radio> | void): Radio;
-}
-
 export declare class Image {
   readonly id: string;
   readonly title: string;

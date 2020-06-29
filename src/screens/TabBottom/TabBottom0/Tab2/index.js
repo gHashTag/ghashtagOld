@@ -1,15 +1,13 @@
 // @flow
 import React, { memo, useState, useEffect, useReducer } from 'react'
 import { Platform, StyleSheet, View } from 'react-native'
-import { Analytics, Auth } from 'aws-amplify'
-import * as Keychain from 'react-native-keychain'
+import { Analytics } from 'aws-amplify'
 import { useTheme, NavigationState, NavigationScreenProp } from '@react-navigation/native'
 import { getStatusBarHeight } from 'react-native-iphone-x-helper'
 import { DataStore, Predicates } from '@aws-amplify/datastore'
 import { Element } from '../../../../models'
-import { ButtonCircle, Score, Space, BG } from '../../../../components'
+import { Score, Space, BG, H1 } from '../../../../components'
 import { initialState, reducer } from '../../../helper'
-import { onScreen } from '../../../../constants'
 
 const styles = StyleSheet.create({
   container: {
@@ -25,7 +23,6 @@ type Tab2T = {
 
 const Tab2 = memo<Tab2T>(({ navigation }) => {
   const [loading, setLoading] = useState(false)
-  const [userAuth, setUser] = useState(true)
   const [state, dispatch] = useReducer(reducer, initialState)
 
   const getData = async () => {
@@ -35,9 +32,6 @@ const Tab2 = memo<Tab2T>(({ navigation }) => {
         page: 0,
         limit: 1000
       })
-      console.log('elements', elements)
-      //const job = await DataStore.query(Element, 'f609910e-a66d-45c1-a46d-38a149d6dccd')
-      //await DataStore.delete(job)
       dispatch({ type: 'QUERY', elements })
       setLoading(false)
     } catch (err) {
@@ -47,31 +41,17 @@ const Tab2 = memo<Tab2T>(({ navigation }) => {
       })
     }
   }
-
-  const key = async () => {
-    //await Keychain.resetInternetCredentials('auth')
-    try {
-      const credentials = await Keychain.getInternetCredentials('auth')
-
-      if (credentials) {
-        const { username, password } = credentials
-        const user = await Auth.signIn(username, password)
-        setLoading(false)
-        user && setUser(true)
-      } else {
-        setLoading(false)
-        setUser(false)
-      }
-    } catch (err) {
-      setLoading(false)
-    }
-  }
+  // const deleteJob = async () => {
+  //   //await DataStore.clear(Gallery)
+  //   const job = await DataStore.query(Element, 'c256f031-30e0-455e-ad44-8c5fe04fa7a9')
+  //   const del = await DataStore.delete(job)
+  //   console.warn('del', del)
+  // }
 
   useEffect(() => {
-    setLoading(true)
-    key()
+    //deleteJob()
     getData()
-    const subscription = DataStore.observe(Element).subscribe(() => getData() && key())
+    const subscription = DataStore.observe(Element).subscribe(() => getData())
     return () => {
       subscription.unsubscribe()
     }
@@ -84,10 +64,10 @@ const Tab2 = memo<Tab2T>(({ navigation }) => {
   return (
     <BG title={dark ? 'shakti2B' : 'shakti2W'} loading={loading}>
       <View style={container}>
-        <Space height={Platform.OS === 'ios' ? getStatusBarHeight() : 20} />
+        <Space height={Platform.OS === 'ios' ? getStatusBarHeight() : 10} />
+        <H1 title="Total score:" />
         <Score title={`${elements.length}`} />
         <Space height={Platform.OS === 'ios' ? 10 : 20} />
-        {!userAuth && <ButtonCircle title="Start Game" onPress={onScreen('HELLO', navigation)} />}
       </View>
     </BG>
   )

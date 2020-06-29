@@ -133,44 +133,6 @@ export type DeletePlaylistInput = {|
   _version?: ?number,
 |};
 
-export type CreateRadioInput = {|
-  id?: ?string,
-  artist: string,
-  album: string,
-  title: string,
-  cover: string,
-  uri: string,
-  owner?: ?string,
-  _version?: ?number,
-|};
-
-export type ModelRadioConditionInput = {|
-  artist?: ?ModelStringInput,
-  album?: ?ModelStringInput,
-  title?: ?ModelStringInput,
-  cover?: ?ModelStringInput,
-  uri?: ?ModelStringInput,
-  and?: ?Array< ?ModelRadioConditionInput >,
-  or?: ?Array< ?ModelRadioConditionInput >,
-  not?: ?ModelRadioConditionInput,
-|};
-
-export type UpdateRadioInput = {|
-  id: string,
-  artist?: ?string,
-  album?: ?string,
-  title?: ?string,
-  cover?: ?string,
-  uri?: ?string,
-  owner?: ?string,
-  _version?: ?number,
-|};
-
-export type DeleteRadioInput = {|
-  id?: ?string,
-  _version?: ?number,
-|};
-
 export type CreateImageInput = {|
   id?: ?string,
   title: string,
@@ -265,19 +227,6 @@ export type ModelPlaylistFilterInput = {|
   and?: ?Array< ?ModelPlaylistFilterInput >,
   or?: ?Array< ?ModelPlaylistFilterInput >,
   not?: ?ModelPlaylistFilterInput,
-|};
-
-export type ModelRadioFilterInput = {|
-  id?: ?ModelIDInput,
-  artist?: ?ModelStringInput,
-  album?: ?ModelStringInput,
-  title?: ?ModelStringInput,
-  cover?: ?ModelStringInput,
-  uri?: ?ModelStringInput,
-  owner?: ?ModelStringInput,
-  and?: ?Array< ?ModelRadioFilterInput >,
-  or?: ?Array< ?ModelRadioFilterInput >,
-  not?: ?ModelRadioFilterInput,
 |};
 
 export type ModelImageFilterInput = {|
@@ -425,75 +374,6 @@ export type DeletePlaylistMutation = {|
     artist: string,
     artwork: string,
     duration: ?number,
-    owner: ?string,
-    _version: number,
-    _deleted: ?boolean,
-    _lastChangedAt: number,
-    createdAt: any,
-    updatedAt: any,
-  |},
-|};
-
-export type CreateRadioMutationVariables = {|
-  input: CreateRadioInput,
-  condition?: ?ModelRadioConditionInput,
-|};
-
-export type CreateRadioMutation = {|
-  createRadio: ? {|
-    __typename: "Radio",
-    id: string,
-    artist: string,
-    album: string,
-    title: string,
-    cover: string,
-    uri: string,
-    owner: ?string,
-    _version: number,
-    _deleted: ?boolean,
-    _lastChangedAt: number,
-    createdAt: any,
-    updatedAt: any,
-  |},
-|};
-
-export type UpdateRadioMutationVariables = {|
-  input: UpdateRadioInput,
-  condition?: ?ModelRadioConditionInput,
-|};
-
-export type UpdateRadioMutation = {|
-  updateRadio: ? {|
-    __typename: "Radio",
-    id: string,
-    artist: string,
-    album: string,
-    title: string,
-    cover: string,
-    uri: string,
-    owner: ?string,
-    _version: number,
-    _deleted: ?boolean,
-    _lastChangedAt: number,
-    createdAt: any,
-    updatedAt: any,
-  |},
-|};
-
-export type DeleteRadioMutationVariables = {|
-  input: DeleteRadioInput,
-  condition?: ?ModelRadioConditionInput,
-|};
-
-export type DeleteRadioMutation = {|
-  deleteRadio: ? {|
-    __typename: "Radio",
-    id: string,
-    artist: string,
-    album: string,
-    title: string,
-    cover: string,
-    uri: string,
     owner: ?string,
     _version: number,
     _deleted: ?boolean,
@@ -779,87 +659,6 @@ export type ListPlaylistsQuery = {|
   |},
 |};
 
-export type SyncRadiosQueryVariables = {|
-  filter?: ?ModelRadioFilterInput,
-  limit?: ?number,
-  nextToken?: ?string,
-  lastSync?: ?number,
-|};
-
-export type SyncRadiosQuery = {|
-  syncRadios: ? {|
-    __typename: "ModelRadioConnection",
-    items: ? Array<? {|
-      __typename: "Radio",
-      id: string,
-      artist: string,
-      album: string,
-      title: string,
-      cover: string,
-      uri: string,
-      owner: ?string,
-      _version: number,
-      _deleted: ?boolean,
-      _lastChangedAt: number,
-      createdAt: any,
-      updatedAt: any,
-    |} >,
-    nextToken: ?string,
-    startedAt: ?number,
-  |},
-|};
-
-export type GetRadioQueryVariables = {|
-  id: string,
-|};
-
-export type GetRadioQuery = {|
-  getRadio: ? {|
-    __typename: "Radio",
-    id: string,
-    artist: string,
-    album: string,
-    title: string,
-    cover: string,
-    uri: string,
-    owner: ?string,
-    _version: number,
-    _deleted: ?boolean,
-    _lastChangedAt: number,
-    createdAt: any,
-    updatedAt: any,
-  |},
-|};
-
-export type ListRadiosQueryVariables = {|
-  filter?: ?ModelRadioFilterInput,
-  limit?: ?number,
-  nextToken?: ?string,
-|};
-
-export type ListRadiosQuery = {|
-  listRadios: ? {|
-    __typename: "ModelRadioConnection",
-    items: ? Array<? {|
-      __typename: "Radio",
-      id: string,
-      artist: string,
-      album: string,
-      title: string,
-      cover: string,
-      uri: string,
-      owner: ?string,
-      _version: number,
-      _deleted: ?boolean,
-      _lastChangedAt: number,
-      createdAt: any,
-      updatedAt: any,
-    |} >,
-    nextToken: ?string,
-    startedAt: ?number,
-  |},
-|};
-
 export type SyncImagesQueryVariables = {|
   filter?: ?ModelImageFilterInput,
   limit?: ?number,
@@ -1097,60 +896,6 @@ export type OnDeletePlaylistSubscription = {|
     artist: string,
     artwork: string,
     duration: ?number,
-    owner: ?string,
-    _version: number,
-    _deleted: ?boolean,
-    _lastChangedAt: number,
-    createdAt: any,
-    updatedAt: any,
-  |},
-|};
-
-export type OnCreateRadioSubscription = {|
-  onCreateRadio: ? {|
-    __typename: "Radio",
-    id: string,
-    artist: string,
-    album: string,
-    title: string,
-    cover: string,
-    uri: string,
-    owner: ?string,
-    _version: number,
-    _deleted: ?boolean,
-    _lastChangedAt: number,
-    createdAt: any,
-    updatedAt: any,
-  |},
-|};
-
-export type OnUpdateRadioSubscription = {|
-  onUpdateRadio: ? {|
-    __typename: "Radio",
-    id: string,
-    artist: string,
-    album: string,
-    title: string,
-    cover: string,
-    uri: string,
-    owner: ?string,
-    _version: number,
-    _deleted: ?boolean,
-    _lastChangedAt: number,
-    createdAt: any,
-    updatedAt: any,
-  |},
-|};
-
-export type OnDeleteRadioSubscription = {|
-  onDeleteRadio: ? {|
-    __typename: "Radio",
-    id: string,
-    artist: string,
-    album: string,
-    title: string,
-    cover: string,
-    uri: string,
     owner: ?string,
     _version: number,
     _deleted: ?boolean,

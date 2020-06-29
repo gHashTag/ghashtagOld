@@ -67,6 +67,7 @@ const DarkTheme = {
     text: '#ffffff',
     text2: '#707070',
     text3: '#D1CDCD',
+    placeholderTextColor: '#707070',
     red: '#ff06f4'
   },
   h0: {

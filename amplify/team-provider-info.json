@@ -1,19 +1,19 @@
 {
     "dev": {
         "awscloudformation": {
-            "AuthRoleName": "amplify-ghashtag-dev-185958-authRole",
-            "UnauthRoleArn": "arn:aws:iam::123118798050:role/amplify-ghashtag-dev-185958-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::123118798050:role/amplify-ghashtag-dev-185958-authRole",
+            "AuthRoleName": "amplify-ghashtag-dev-164222-authRole",
+            "UnauthRoleArn": "arn:aws:iam::123118798050:role/amplify-ghashtag-dev-164222-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::123118798050:role/amplify-ghashtag-dev-164222-authRole",
             "Region": "us-east-1",
-            "DeploymentBucketName": "amplify-ghashtag-dev-185958-deployment",
-            "UnauthRoleName": "amplify-ghashtag-dev-185958-unauthRole",
-            "StackName": "amplify-ghashtag-dev-185958",
-            "StackId": "arn:aws:cloudformation:us-east-1:123118798050:stack/amplify-ghashtag-dev-185958/d54a6200-b559-11ea-9f9d-0ee5b554e1bc",
-            "AmplifyAppId": "dpo33djcqbefq"
+            "DeploymentBucketName": "amplify-ghashtag-dev-164222-deployment",
+            "UnauthRoleName": "amplify-ghashtag-dev-164222-unauthRole",
+            "StackName": "amplify-ghashtag-dev-164222",
+            "StackId": "arn:aws:cloudformation:us-east-1:123118798050:stack/amplify-ghashtag-dev-164222/9bfdd6f0-b9fd-11ea-a346-12c1d85cca19",
+            "AmplifyAppId": "d230zpg2ghgtsn"
         },
         "categories": {
             "auth": {
-                "ghashtagfb6b86ee": {}
+                "ghashtag2bea8aa5": {}
             }
         }
     }

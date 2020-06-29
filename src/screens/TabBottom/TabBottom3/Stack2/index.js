@@ -47,7 +47,7 @@ const Stack2 = memo<Stack2T>(({ route, navigation }) => {
     try {
       const original = await DataStore.query(Element, input.id)
       const update = await DataStore.save(
-        Element.copyOf(original, updated => {
+        Element.copyOf(original, (updated) => {
           updated.air = air
           updated.fire = fire
           updated.water = water

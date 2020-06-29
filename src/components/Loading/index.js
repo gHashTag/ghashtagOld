@@ -7,18 +7,17 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    paddingTop: 200,
-    backgroundColor: 'transparent'
+    paddingTop: 200
   }
 })
 
 const Loading = () => {
   const {
-    colors: { secondary }
+    colors: { secondary, backgroundColor }
   } = useTheme()
   return (
-    <View style={styles.container}>
-      <Spinner size={45} type="9CubeGrid" color={secondary} />
+    <View style={[styles.container, { backgroundColor }]}>
+      <Spinner size={65} type="Pulse" color={secondary} />
     </View>
   )
 }
