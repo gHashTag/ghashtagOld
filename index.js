@@ -17,7 +17,8 @@ YellowBox.ignoreWarnings([
   'Animated: `useNativeDriver`',
   'Sending `onAnimatedValueUpdate`',
   'DataStore - Connection failed:',
-  "Can't perform a React state"
+  "Can't perform a React state",
+  'Setting a timer'
 ])
 
 AppRegistry.registerComponent(appName, () => App)

@@ -87,7 +87,14 @@ const Player = ({ style, onNext, onPrevious, onTogglePlayback }) => {
       const tr = await TrackPlayer.getTrack(event.nextTrack)
       const jsonValue = JSON.stringify(tr)
       await AsyncStorage.setItem('@track', jsonValue)
-      setTrack(tr)
+
+      tr
+        ? setTrack(tr)
+        : setTrack({
+            title: '',
+            artist: '',
+            artwork: 'https://s3.eu-central-1.wasabisys.com/ghashtag/Radio/Cover/transparentCover.png'
+          })
     }
   })
 
@@ -120,7 +127,7 @@ const Player = ({ style, onNext, onPrevious, onTogglePlayback }) => {
       <Space height={10} />
       <ProgressBar />
       <Space height={10} />
-      <H1 title={title} textStyle={h} />
+      {title !== '' && <H1 title={title} textStyle={h} />}
       <Space height={10} />
       <H5 title={artist} textStyle={h} />
       <View style={controlsStyle}>
