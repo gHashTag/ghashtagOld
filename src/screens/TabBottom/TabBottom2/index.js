@@ -105,14 +105,12 @@ const TabBottom2 = memo<TabBottom2T>(() => {
 
 export { TabBottom2 }
 // createPlaylist({
-//   url: 'https://s3.eu-central-1.wasabisys.com/ghashtag/Radio/14%20-%20Majal%20-%20Deep%20Blue.wav',
+//   url: 'https://s3.eu-central-1.wasabisys.com/ghashtag/Radio/14-Majal-DeepBlue.wav',
 //   title: 'Deep Blue',
 //   artist: 'Majal',
 //   artwork: 'https://s3.eu-central-1.wasabisys.com/ghashtag/Radio/Cover/Tathastu.png',
 //   duration: 552
 // })
-//deleteJob()
-
 // const createPlaylist = async (values) => {
 //   console.log('values', values)
 //   try {
@@ -122,12 +120,13 @@ export { TabBottom2 }
 //     console.log('err', err)
 //   }
 // }
+
 // const deleteJob = async () => {
 //   //await DataStore.clear(Gallery)
 //   try {
-//     const obj = await DataStore.query(Playlist, '22756079-f16a-4a1d-a0b9-3e2021d57f79')
+//     const obj = await DataStore.query(Playlist, 'd5e484c2-6c3e-4326-ba54-dccd4235cd0d')
 //     const del = await DataStore.delete(obj)
-//     //console.warn('del', del)
+//     console.warn('del', del)
 //   } catch (error) {
 //     //console.log('error', error)
 //   }

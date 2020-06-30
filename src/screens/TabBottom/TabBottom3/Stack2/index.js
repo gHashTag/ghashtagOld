@@ -66,7 +66,7 @@ const Stack2 = memo<Stack2T>(({ route, navigation }) => {
   return (
     <BG title={dark ? 'CristalsB' : 'CristalsW'}>
       <View style={container}>
-        <Space height={Platform.OS === 'ios' ? 50 : 20} />
+        <Space height={Platform.OS === 'ios' ? 40 : 20} />
         <H1 title="CHANGE TEAM" />
         <ButtonMiddle
           title={dark ? 'FireB' : 'FireW'}
@@ -84,7 +84,8 @@ const Stack2 = memo<Stack2T>(({ route, navigation }) => {
           title={dark ? 'EarthB' : 'EarthW'}
           onPress={() => updateObj({ air: false, fire: false, water: false, earth: true })}
         />
-        <H3 title="@hackathonUnicorn" viewStyle={h3} />
+        <H3 title="@ghashtag" viewStyle={h3} />
+        <Space height={Platform.OS === 'ios' ? 20 : 20} />
       </View>
     </BG>
   )

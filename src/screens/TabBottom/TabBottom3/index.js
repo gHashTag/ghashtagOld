@@ -68,7 +68,10 @@ const TabBottom3 = memo<TabBottom3T>(({ navigation }) => {
         setUser(false)
       }
     } catch (err) {
-      console.log('error', err) // eslint-disable-line
+      Analytics.record({
+        name: 'TabBottom3',
+        attributes: err
+      })
       setLoading(false)
     }
   }, [])

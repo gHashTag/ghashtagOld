@@ -1,12 +1,12 @@
 // @flow
 import React, { memo } from 'react'
 import { Platform, StyleSheet, View } from 'react-native'
-import { Auth } from 'aws-amplify'
+import { Auth, Analytics } from 'aws-amplify'
 import { NavigationState, NavigationScreenProp, useTheme } from '@react-navigation/native'
 import { DataStore } from '@aws-amplify/datastore'
 import { Element } from '../../models'
 import { ButtonMiddle, H1, H3, Space, BG } from '../../components'
-import { goHome, onScreen } from '../../constants'
+import { onScreen } from '../../constants'
 
 const styles = StyleSheet.create({
   container: {
@@ -28,8 +28,11 @@ const Stack1 = memo<Stack1T>(({ navigation }) => {
     try {
       const selected = await DataStore.save(new Element({ ...input }))
       selected && onScreen('MAIN', navigation)()
-    } catch (e) {
-      console.log('Stack1', e) //eslint-disable-line
+    } catch (err) {
+      Analytics.record({
+        name: 'Stack1',
+        attributes: err
+      })
     }
   }
 

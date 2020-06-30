@@ -5,6 +5,7 @@ import { Analytics } from 'aws-amplify'
 import { DataStore, Predicates } from '@aws-amplify/datastore'
 import { useTheme } from '@react-navigation/native'
 import GallerySwiper from 'react-native-gallery-swiper'
+import _ from 'lodash'
 import { Gallery } from '../../../models'
 import { Loading } from '../../../components'
 
@@ -27,8 +28,8 @@ const TabBottom1 = memo<TabBottom1T>(() => {
         page: 0,
         limit: 100
       })
-      console.log('array', array)
-      setElem(array)
+      const random = _.shuffle(array)
+      setElem(random)
       setLoading(false)
     } catch (err) {
       Analytics.record({
@@ -50,7 +51,7 @@ const TabBottom1 = memo<TabBottom1T>(() => {
   // }
 
   useEffect(() => {
-    //createGallery({ uri: 'https://s3.eu-central-1.wasabisys.com/ghashtag/Photo/Tab1/31.JPG' })
+    //createGallery({ uri: 'https://s3.eu-central-1.wasabisys.com/ghashtag/Photo/Tab1/30.JPG' })
     //deleteJob()
     setLoading(true)
     getData()

@@ -4,7 +4,7 @@ import React, { memo, useEffect, useCallback, useState } from 'react'
 import * as Keychain from 'react-native-keychain'
 import { StyleSheet, View } from 'react-native'
 import { NavigationState, NavigationScreenProp, useTheme } from '@react-navigation/native'
-import { BBB, G, Button, H3, Space, BG } from '../../components'
+import { BBB, G, H3, Space, BG, ButtonCircle } from '../../components'
 import { onScreen } from '../../constants'
 
 const styles = StyleSheet.create({
@@ -60,10 +60,10 @@ const Stack0 = memo<Stack0T>(({ navigation }) => {
         <Space height={40} />
         <BBB title={dark ? '999B' : '999W'} onPress={onScreen('HELLO', navigation)} />
         <G title="G" onPress={onScreen('HELLO', navigation)} />
-        <Button title="start game" onPress={onScreen('HELLO', navigation)} />
+        <ButtonCircle title="start game" onPress={onScreen('HELLO', navigation)} />
         <Space height={0} />
-        <H3 title="@hackthonUnicorn" viewStyle={h3} />
-        <Space height={0} />
+        <H3 title="@ghashtag" viewStyle={h3} />
+        <Space height={10} />
       </View>
     </BG>
   )

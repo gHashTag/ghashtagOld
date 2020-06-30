@@ -7,8 +7,7 @@
  */
 ///* eslint-disable */
 import React from 'react'
-import { useColorScheme } from 'react-native'
-import { AppearanceProvider } from 'react-native-appearance'
+import { AppearanceProvider, useColorScheme } from 'react-native-appearance'
 import Amplify from '@aws-amplify/core'
 import * as Keychain from 'react-native-keychain'
 import { AmplifyProvider } from 'aws-amplify-react-hooks'
@@ -63,7 +62,7 @@ Amplify.configure({
 const App: () => React$Node = () => {
   //const [value] = useState(false)
   const scheme = useColorScheme()
-  const theme = scheme ? DarkTheme : LightTheme
+  const theme = scheme === 'dark' ? DarkTheme : LightTheme
   return (
     <>
       <AppearanceProvider>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Auth } from 'aws-amplify'
+import { Auth, Analytics } from 'aws-amplify'
 import * as Keychain from 'react-native-keychain'
 import { AppContainer, Button, Space, H6 } from '../../../components'
 import { onScreen } from '../../../constants'
@@ -21,7 +21,10 @@ const Hello = ({ navigation }) => {
           setLoading(false)
         }
       } catch (err) {
-        console.log('error', err) // eslint-disable-line
+        Analytics.record({
+          name: 'Hello',
+          attributes: err
+        })
         setLoading(false)
       }
     }
