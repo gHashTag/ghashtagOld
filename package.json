@@ -27,7 +27,7 @@
     "aws-amplify-react-native": "^4.2.0",
     "faker": "^4.1.0",
     "formik": "^2.1.4",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "npx": "^10.2.2",
     "react": "16.11.0",
     "react-native": "0.62.2",
